@@ -12,8 +12,8 @@ int main() {
   GeePsConfig geeps_config;
   geeps_config.host_list.push_back("localhost");
   int machine_id = 0;
-  geeps_config.gpu_memory_capacity = (size_t)1 << 32;
-      /* Set GPU memory capacity to 4 GB */
+  geeps_config.gpu_memory_capacity = (size_t)1 << 30;
+      /* Set GPU memory capacity to 4 GB */ //changed to 1 GB
   GeePs *geeps = new GeePs(machine_id, geeps_config);
 
   /* Prepare the row keys */
